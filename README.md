@@ -10,3 +10,5 @@ https://github.com/YapengTian/Single-Image-Super-Resolution
 https://github.com/amusi/awesome-object-detection
 
 https://github.com/mrgloom/awesome-semantic-segmentation
+
+https://github.com/bentrevett/pytorch-image-classification
