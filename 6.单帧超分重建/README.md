@@ -1,198 +1,118 @@
-# Single-Image-Super-Resolution
-A list of resources for example-based single image super-resolution, inspired by [Awesome-deep-vision](https://github.com/kjw0612/awesome-deep-vision) and [Awesome Computer Vision](https://github.com/jbhuang0604/awesome-computer-vision) .
-
-By Yapeng Tian and Yunlun Zhang (if you have any suggestions, please contact us! Email: yapengtian@rochester.edu OR yulun100@gmail.com).
-
-Tip: For SR beginners, I recommend you to read some early learning based SISR works which will help understand the problem.
-
-## Survey Paper
-
-[1] Wenming Yang, Xuechen Zhang, Yapeng Tian, Wei Wang, Jing-Hao Xue. Deep Learning for Single Image Super-Resolution:
-A Brief Review. TMM, 2019. [[Paper]](https://arxiv.org/pdf/1808.03344.pdf)
-
-## Example-based methods
-
-### Early learning-based methods
-
-[1] Freeman, William T and Pasztor, Egon C and Carmichael, Owen T, Learning low-level vision, IJCV, 2000. [[Paper]](http://people.csail.mit.edu/billf/papers/TR2000-05.pdf) ([Freeman](billf.mit.edu) et al. first presented example-based or learning-based super-resolution framework - learn relationships between low-resolution image patches and its high-resolution counterparts.)
-
-[2] Freeman, William T and Jones, Thouis R and Pasztor, Egon C, Example-based super-resolution, IEEE Computer graphics and Applications, 2002.    [[Paper]](http://www.merl.com/publications/docs/TR2001-30.pdf) 
-
-[3] Chang, Hong and Yeung, Dit-Yan and Xiong, Yimin, Super-resolution through neighbor embedding, CVPR, 2004. [[Paper]](http://repository.ust.hk/ir/bitstream/1783.1-2284/1/yeung.cvpr2004.pdf) [[Code]](http://www.jdl.ac.cn/user/hchang/publication.htm) (The idea that low-resolution patches and corresponding high-resolution patches share similar local geometries highly influences the subsequent coding-based or dictionary-based methods.)
-
-### Sparsity-based methods
-[1] Yang, Jianchao and Wright, John and Huang, Thomas S and Ma, Yi, Image super-resolution via sparse representation, IEEE trans. image processing 2010. [[paper]](http://ieeexplore.ieee.org/document/5466111/?arnumber=5466111) [[Code]](http://www.ifp.illinois.edu/~jyang29/) (SCSR: Classical sparsity-based SISR method - use sparse coding technique to learn low-resolution and high-resolution dictionaries.)
-
-[2] Zeyde, Roman and Elad, Michael and Protter, Matan, On single image scale-up using sparse-representations, International conference on curves and surfaces, 2010. [[Paper]](http://www.cs.technion.ac.il/~elad/publications/conferences/2010/ImageScaleUp_LNCS.pdf) [[Code]](http://www.cs.technion.ac.il/~elad/software/)  (Low dimension feature speeds up the algorithm. Many sparsity-based image restoration techniques can be found in Prof. [Elad](http://www.cs.technion.ac.il/~elad/index.html)'s Website!) 
-
-[3] Weisheng Dong, Lei Zhang, Guangming Shi, and Xiaolin Wu, Image Deblurring and Super-resolution by Adaptive Sparse Domain Selection and Adaptive Regularization, TIP, 2011. [[Website]](http://www4.comp.polyu.edu.hk/~cslzhang/ASDS_AReg.htm) (Clustering is a very effective trick and local and nonlocal regularization terms are very powerful! Other good sparsity-based super-resolution methods can be found in Prof. [Lei Zhang](http://www4.comp.polyu.edu.hk/~cslzhang/)'s and [Weisheng Dong](http://see.xidian.edu.cn/faculty/wsdong/)'s Website!)
-
-[4] Peleg, Tomer and Elad, Michael, A statistical prediction model based on sparse representations for single image super-resolution, TIP, 2014. [[Paper]](http://www.cs.technion.ac.il/~elad/publications/journals/2013/SingleImageSR_TIP.pdf) [[Code]](http://www.cs.technion.ac.il/~elad/software/) (Predict the relationships between Low-resolution and high-resolution representation coefficients.)
-
-### Super-resolution via self-examplars
-
-[1] Daniel Glasner, Shai Bagon and Michal, Irani, Super-Resolution from a Single Image, ICCV, 2009. [[Paper]](http://www.wisdom.weizmann.ac.il/~vision/single_image_SR/files/single_image_SR.pdf)
-
-[2] Jia-Bin Huang, Abhishek Singh, and Narendra Ahuja, "Single Image Super-Resolution from Transformed Self-Exemplars", CVPR, 2015. [[Project]](https://github.com/jbhuang0604/SelfExSR).
-
-### Locally Linear Regression
-
-[1] Gu, Shuhang and Sang, Nong and Ma, Fan, Fast Image Super Resolution via Local Regression, ICPR, 2012. [[Paper]](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6460827) (Kmeans clusetering + ridge regression)
-
-[2] Timofte, Radu and De Smet, Vincent and Van Gool, Luc, Anchored neighborhood regression for fast example-based super-resolution, ICCV, 2013. [[Paper]](http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Timofte_Anchored_Neighborhood_Regression_2013_ICCV_paper.pdf) [[Website]](http://www.vision.ee.ethz.ch/~timofter/) (ANR method)
-
-[3] Yang, Chih-Yuan and Yang, Ming-Hsuan, Fast direct super-resolution by simple functions, ICCV, 2013. [[Paper]](http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Yang_Fast_Direct_Super-Resolution_2013_ICCV_paper.pdf) [[Website]](https://eng.ucmerced.edu/people/cyang35/ICCV13/ICCV13.html) 
-
-[4] Timofte, Radu and De Smet, Vincent and Van Gool, Luc, A+: Adjusted anchored neighborhood regression for fast super-resolution, ACCV, 2014. [[Paper]](https://pdfs.semanticscholar.org/ca57/66b91da4903ad6f6d40a5b31a3ead1f7f6de.pdf) [[Website]](http://www.vision.ee.ethz.ch/~timofter/) (More data and better performance!)
-
-[5] Schulter, Samuel and Leistner, Christian and Bischof, Horst, Fast and accurate image upscaling with super-resolution forests, CVPR, 2015. [[Paper]](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schulter_Fast_and_Accurate_2015_CVPR_paper.pdf) [[Code]](http://lrs.icg.tugraz.at/members/schulter#software)
-
-[6] Salvador, Jordi, and Eduardo Pérez-Pellitero, Naive Bayes Super-Resolution Forest, ICCV, 2015. [[Paper]](http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Salvador_Naive_Bayes_Super-Resolution_ICCV_2015_paper.pdf) [[Website]](http://perezpellitero.github.io/) (Very fast!)
-
-[7] E. Pérez-Pellitero and J. Salvador and J. Ruiz-Hidalgo and B. Rosenhahn, PSyCo: Manifold Span Reduction for Super Resolution, CVPR, 2016. [[Paper]](http://perezpellitero.github.io/documents/PerezPellitero2016Cvpr.pdf) [[Website]](http://perezpellitero.github.io/) (choose a better distance metric!)
-
-[8] Timofte, Radu and Rothe, Rasmus and Van Gool, Luc, Seven Ways to Improve Example-Based Single Image Super Resolution, CVPR, 2016. [[Website]](http://www.vision.ee.ethz.ch/~timofter/)
-
-### Deep Architectures
-
-[1] Chao Dong, Chen Change Loy, Kaiming He, Xiaoou Tang, Learning a deep convolutional network for image super-resolution, ECCV, 2014. [[Website]](http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html) (first introduce CNN to solve single image super-resolution.)
-
-[2] Chao Dong, Chen Change Loy, Kaiming He, Xiaoou Tang, Image Super-Resolution Using Deep Convolutional Networks, IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2016. [[Website]](http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html) (use more training data and achieve better SR performance.) [[Keras]](http://github.com/YapengTian/SRCNN-Keras)
-
-[3] Wang, Zhaowen and Liu, Ding and Yang, Jianchao and Han, Wei and Huang, Thomas, Deep networks for image super-resolution with sparse prior, ICCV, 2015. [[Website]](http://www.ifp.illinois.edu/~dingliu2/iccv15/) 
-
-[4] Jimmy SJ. Ren, Li Xu, Qiong Yan, Wenxiu Sun, Shepard Convolutional Neural Networks, NIPS, 2015. [[Paper]](https://papers.nips.cc/paper/5774-shepard-convolutional-neural-networks.pdf) [[Code]](https://github.com/jimmy-ren/vcnn_double-bladed/tree/master/applications/Shepard_CNN)
-
-[5] Shi, Wenzhe and Caballero, Jose and Huszar, Ferenc and Totz, Johannes and Aitken, Andrew P. and Bishop, Rob and Rueckert, Daniel and Wang, Zehan, Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network, CVPR, 2016. [[Paper]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Real-Time_Single_Image_CVPR_2016_paper.pdf)
-
-[6] Kim, Jiwon and Kwon Lee, Jung and Mu Lee, Kyoung, Accurate Image Super-Resolution Using Very Deep Convolutional Networks, CVPR, 2016. [[Paper]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Accurate_Image_Super-Resolution_CVPR_2016_paper.pdf) [[Code]](http://github.com/huangzehao/caffe-vdsr) [[website]](http://cv.snu.ac.kr/?page_id=60)
-
-[7] Kim, Jiwon and Kwon Lee, Jung and Mu Lee, Kyoung, Deeply-Recursive Convolutional Network for Image Super-Resolution, CVPR, 2016. [[Paper]](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kim_Deeply-Recursive_Convolutional_Network_CVPR_2016_paper.pdf) [[website]](http://cv.snu.ac.kr/?page_id=60)
-
-[8] Chao Dong, Chen Change Loy, Xiaoou Tang, Accelerating the Super-Resolution Convolutional Neural Network, ECCV, 2016. [[Paper]](https://arxiv.org/pdf/1608.00367.pdf) [[Code]](http://mmlab.ie.cuhk.edu.hk/projects/FSRCNN.html)
-
-[9] Justin Johnson, Alexandre Alahi, Fei-Fei Li, Perceptual Losses for Real-Time Style Transfer and Super-Resolution, ECCV, 2016, [[Website]](http://cs.stanford.edu/people/jcjohns/) (Perceptual Loss)
-
-[10] Christian Ledig, Lucas Theis, Ferenc Huszar, Jose Caballero, Andrew Aitken, Alykhan Tejani, Johannes Totz, Zehan Wang, Wenzhe Shi, Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network, arXiv, 2016. [[Paper]](https://arxiv.org/pdf/1609.04802.pdf) (Perceptual Loss, Great Performance!)
-
-[11] Julien Maira, End-to-End Kernel Learning with Supervised Convolutional Kernel Networks, NIPS, 2016. [[Paper]](https://arxiv.org/pdf/1605.06265v1.pdf)
-
-[12] Xiao-Jiao Mao, Chunhua Shen, Yu-Bin Yang, Image Restoration Using Convolutional Auto-encoders with Symmetric Skip Connections, arXiv, 2016. [[Paper]](https://arxiv.org/pdf/1606.08921.pdf)
-
-[13] Joan Bruna, Pablo Sprechmann, Yann LeCun, SUPER-RESOLUTION WITH DEEP CONVOLUTIONAL SUFFICIENT STATISTICS, ICLR, 2016. [[Paper]](https://arxiv.org/pdf/1511.05666.pdf) (Perceptual Loss)
-
-[14] Mehdi S. M. Sajjadi, Bernhard Schölkopf, Michael Hirsch, EnhanceNet: Single Image Super-Resolution through Automated Texture Synthesis, ICCV, 2017. [[Paper]](http://openaccess.thecvf.com/content_ICCV_2017/papers/Sajjadi_EnhanceNet_Single_Image_ICCV_2017_paper.pdf) (adversarial training + Texture matching loss to reduce unnatural textures produced by perceptual loss)
-
-[15] Casper Kaae Sønderby, Jose Caballero, Lucas Theis, Wenzhe Shi, Ferenc Huszár, Amortised MAP Inference for Image Super-resolution, ICLR, 2017. [[Paper]](https://arxiv.org/pdf/1610.04490v3.pdf) (calculate the MAP estimate directly using a convolutional neural network)
-
-[16] Wei-Sheng Lai, Jia-Bin Huang, Narendra Ahuja, and Ming-Hsuan Yang, Deep Laplacian Pyramid Networks for Fast and Accurate Super-Resolution, CVPR, 2017. [[Website]](http://graduatestudents.ucmerced.edu/wlai24/)
-
-[17] K. Zhang, W. Zuo, S. Gu and L. Zhang, "Learning Deep CNN Denoiser Prior for Image Restoration," CVPR, 2017. [[Code]](http://github.com/cszn/ircnn)
-
-[18] Ying Tai, Jian Yang, and Xiaoming Liu. Image Super-Resolution via Deep Recursive Residual Network, CVPR, 2017. [[Code]](https://github.com/tyshiwo/DRRN_CVPR17)
-
-[19] E. Agustsson, R. Timofte, L. Van Gool. Anchored Regression Networks applied to Age Estimation and Super Resolution, ICCV, 2017. [[paper]](http://www.vision.ee.ethz.ch/~timofter/publications/Agustsson-ICCV-2017.pdf)
-
-[20] Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, Kyoung Mu Lee. Enhanced Deep Residual Networks for Single Image Super-Resolution. CVPRW, 2017. [[paper]](https://arxiv.org/abs/1707.02921)(state-of-the-art) [[Code]](https://github.com/LimBee/NTIRE2017)
-
-[21] Ying Tai, Jian Yang, Xiaoming Liu and Chunyan Xu. MemNet: A Persistent Memory Network for Image Restoration, ICCV, 2017. [[code]](https://github.com/tyshiwo/MemNet)
-
-[22] Radu Timofte et al. NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results, CVPRW, 2017. [[Paper]](http://www.vision.ee.ethz.ch/~timofter/publications/Timofte-CVPRW-2017.pdf)
-
-[23] Jin Yamanaka, Shigesumi Kuwashima and Takio Kurita: Fast and Accurate Image Super Resolution by Deep CNN with Skip Connection and Network in Network, ICONIPS, 2017. [[Paper]](https://arxiv.org/pdf/1707.05425.pdf)[[Code]](https://github.com/jiny2001/dcscn-super-resolution) 
-
-[24] Tong Tong, Gen Li, Xiejie Liu, Qinquan Gao. Image Super-Resolution Using Dense Skip Connections. ICCV, 2017. [[Paper]](http://openaccess.thecvf.com/content_ICCV_2017/papers/Tong_Image_Super-Resolution_Using_ICCV_2017_paper.pdf)
-
-[25] Yulun Zhang, Yapeng Tian, Yu Kong, Bineng Zhong, Yun Fu. Residual Dense Network for Image Super-Resolution. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1802.08797.pdf) [[code]](https://github.com/yulunzhang/RDN)
-
-[26] Muhammad Haris, Greg Shakhnarovich, and Norimichi Ukita. Deep Back-Projection Networks For Super-Resolution. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1803.02735.pdf) [[code-caffe]](https://github.com/alterzero/DBPN-caffe) [[code-pytorch]](https://github.com/alterzero/DBPN-Pytorch)
-
-[27] Kai Zhang, Wangmeng Zuo, and Lei Zhang. Learning a Single Convolutional Super-Resolution Network for Multiple Degradations. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1712.06116.pdf) [[code]](https://github.com/cszn/SRMD)
-
-[28] Adrian Bulat and Georgios Tzimiropoulos. Super-FAN: Integrated facial landmark localization and super-resolution of real-world low resolution faces in arbitrary poses with GANs. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1712.02765.pdf)
-
-[29] Bjoern Haefner, Yvain Queau, Thomas Möllenhoff, and Daniel Cremers. Fight ill-posedness with ill-posedness: Single-shot variational depth super-resolution from shading. CVPR 2018.
-
-[30] Xintao Wang, Ke Yu, Chao Dong, and Chen-Change Loy. Recovering Realistic Texture in Image Super-resolution by Spatial Feature Modulation. CVPR 2018. [[Paper]](http://mmlab.ie.cuhk.edu.hk/projects/SFTGAN/)
-
-[31] Zheng Hui, Xiumei Wang, and Xinbo Gao. Fast and Accurate Single Image Super-Resolution via Information Distillation Network. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1803.09454.pdf)
-
-[32] Xin Yu, Basura Fernando, Richard Hartley, and Fatih Porikli. Super-Resolving Very Low-Resolution Face Images with Supplementary Attributes. CVPR 2018. [[Paper]](https://basurafernando.github.io/papers/XinYuCVPR18.pdf)
-
-[33] Wei Han, Shiyu Chang, Ding Liu, Michael Witbrock, and Thomas Huang. Image Super-resolution via Dual-state Recurrent Neural Networks. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1805.02704.pdf)
-
-[34] Yu Chen, Ying Tai, Xiaoming Liu, Chunhua Shen, and Jian Yang. FSRNet: End-to-End Learning Face Super-Resolution with Facial Priors. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1711.10703.pdf)
-
-[35] Ying Qu, Hairong Qi, and Chiman Kwan. Unsupervised Sparse Dirichlet-Net for Hyperspectral Image Super-Resolution. CVPR 2018.
-
-[36] Assaf Shocher, Nadav Cohen, and Michal Irani. “Zero-Shot” Super-Resolution using Deep Internal Learning. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1712.06087.pdf)
-
-[37] Younghyun Jo, Seoung Wug Oh, JaeYeon Kang, and Seon Joo Kim. Deep Video Super-Resolution Network Using Dynamic Upsampling Filters Without Explicit Motion Compensation. CVPR 2018.
-
-[38] Weimin Tan, Bo Yan, and Bahetiyaer Bare. Feature Super-Resolution: Make Machine See More Clearly. CVPR 2018.
-
-[39] Mehdi S. M. Sajjadi, Raviteja Vemulapalli, and Matthew Brown. Frame-Recurrent Video Super-Resolution. CVPR 2018. [[Paper]](https://arxiv.org/pdf/1801.04590.pdf)
-
-[40] Yifan Wang, Federico Perazzi, Brian McWilliams, Alexander Sorkine-Hornung, Olga Sorkine-Hornung, Christopher Schroers.
-A Fully Progressive Approach to Single-Image Super-Resolution. arXiv, 2018. [[Paper]](https://arxiv.org/pdf/1804.02900.pdf)
-
-[41] Roey Mechrez, Itamar Talmi, Firas Shama, Lihi Zelnik-Manor. Learning to Maintain Natural Image Statistics. arXiv, 2018. [[Paper]](https://arxiv.org/abs/1803.04626) [[Project]](http://cgm.technion.ac.il/Computer-Graphics-Multimedia/Software/Contextual/) [[ECCV SR Challenge]](https://www.pirm2018.org/).
-
-[42] Yulun Zhang, Kunpeng Li, Kai Li, Lichen Wang, Bineng Zhong, Yun Fu. Image Super-Resolution Using Very Deep Residual Channel Attention Networks. ECCV 2018. [[Paper]](https://arxiv.org/pdf/1807.02758.pdf) [[code]](https://github.com/yulunzhang/RCAN)
-
-[43] Wenming Yang, Xuechen Zhang, Yapeng Tian, Wei Wang, Jing-Hao Xue. Deep Learning for Single Image Super-Resolution:
-A Brief Review. arxiv, 2018. [[Paper]](https://arxiv.org/pdf/1808.03344.pdf) (a survey paper)
-
-[44] Adrian Bulat, Jing Yang, Georgios Tzimiropoulos. To learn image super-resolution, use a GAN to
-learn how to do image degradation first. ECCV, 2018. [[Paper]](https://arxiv.org/pdf/1807.11458.pdf) 
-
-[45] Namhyuk Ahn, Byungkon Kang, Kyung-Ah Sohn. Fast, Accurate, and Lightweight Super-Resolution with Cascading Residual Network. ECCV 2018. [[Paper]](https://arxiv.org/abs/1803.08664)
-
-[46] Xintao Wang, Ke Yu, Shixiang Wu, Jinjin Gu, Yihao Liu, Chao Dong, Chen Change Loy, Yu Qiao, Xiaoou Tang. Enhanced Super-Resolution Generative Adversarial Networks. ECCV2018 PIRM Workshop. [[Code]](https://github.com/xinntao/ESRGAN)
-
-[47] Seong-Jin Park, Hyeongseok Son, Sunghyun Cho, Ki-Sang Hong. SRFeat: Single Image Super-Resolution with Feature Discrimination. ECCV 2018. [[Paper]](http://openaccess.thecvf.com/content_ECCV_2018/papers/Seong-Jin_Park_SRFeat_Single_Image_ECCV_2018_paper.pdf)
-
-[48] Subeesh Vasu, Nimisha T. M., A. N. Rajagopalan. Analyzing Perception-Distortion Tradeoff using Enhanced Perceptual Super-resolution Network. ECCV2018 PIRM Workshop. [[Code]](https://github.com/subeeshvasu/2018_subeesh_epsr_eccvw)
-
-[49] Vu, Thang and Van Nguyen, Cao and Pham, Trung X. and Luu, Tung M. and Yoo, Chang Dong. Fast and Efficient Image Quality Enhancement via Desubpixel Convolutional Neural Networks. ECCV2018 PIRM Mobile Workshop [[Paper]](http://openaccess.thecvf.com/content_ECCVW_2018/papers/11133/Vu_Fast_and_Efficient_Image_Quality_Enhancement_via_Desubpixel_Convolutional_Neural_ECCVW_2018_paper.pdf) [[Code]](https://github.com/thangvubk/FEQE)
-
-[50] Xintao Wang, Ke Yu, Chao Dong, Xiaoou Tang, Chen Change Loy. Deep Network Interpolation for Continuous Imagery Effect Transition. CVPR 2019. [[Website]](https://xinntao.github.io/projects/DNI)
-
-[51] Xuecai Hu, Haoyuan Mu, Xiangyu Zhang, Zilei Wang, Jian Sun, Tieniu Tan. Meta-SR: A Magnification-Arbitrary Network for Super-Resolution. ArXiv, 2019. [[Paper]](https://arxiv.org/pdf/1903.00875.pdf)
-
-[52] Zhang, Kai and Zuo, Wangmeng and Zhang, Lei. Deep Plug-and-Play Super-Resolution for Arbitrary Blur Kernels, CVPR 2019. [[Project]](https://github.com/cszn/DPSR)
-
-[53] Xuaner Zhang, Qifeng Chen, Ren Ng, and Vladlen Koltun. Zoom to Learn, Learn to Zoom, CVPR 2019. [[Paper]](http://vladlen.info/papers/zoom.pdf)
-
-[54] Zhen Li, Jinglei Yang, Zheng Liu, Xiaomin Yang, Gwanggil Jeon, and Wei Wu. Feedback Network for Image Super-Resolution, CVPR 2019. [[Paper]](https://arxiv.org/abs/1903.09814)[[Code]](https://github.com/Paper99/SRFBN_CVPR19)
-
-[55] Chang Chen, Zhiwei Xiong, Xinmei Tian, Zheng-Jun Zha, and Feng Wu.Camera Lens Super-Resolution, CVPR 2019. [[Paper]](https://arxiv.org/pdf/1904.03378.pdf)[[Code]](https://github.com/ngchc/CameraSR)
-
-[56] Zhifei Zhang, Zhaowen Wang, Zhe Lin, Hairong Qi. Image Super-Resolution by Neural Texture Transfer. CVPR 2019. [[Paper]](https://arxiv.org/pdf/1903.00834.pdf)
-
-[57] Tao Dai, Jianrui Cai, Yongbing Zhang, Shu-Tao Xia, Lei Zhang. Second-order Attention Network for Single Image Super-resolution. CVPR 2019. [[Project]](https://github.com/daitao/SAN)
-
-[58] Gu, Jinjin and Lu, Hannan and Zuo, Wangmeng and Dong, Chao. Blind Super-Resolution With Iterative Kernel Correction, CVPR 2019. [[Paper]](http://openaccess.thecvf.com/content_CVPR_2019/papers/Gu_Blind_Super-Resolution_With_Iterative_Kernel_Correction_CVPR_2019_paper.pdf)
-
-[59] Xu, Xiangyu and Ma, Yongrui and Sun, Wenxiu. Towards Real Scene Super-Resolution With Raw Images, CVPR 2019. [[Paper]](http://openaccess.thecvf.com/content_CVPR_2019/papers/Xu_Towards_Real_Scene_Super-Resolution_With_Raw_Images_CVPR_2019_paper.pdf)
-
-[60] He, Xiangyu and Mo, Zitao and Wang, Peisong and Liu, Yang and Yang, Mingyuan and Cheng, Jian. ODE-Inspired Network Design for Single Image Super-Resolution. CVPR 2019. [[Paper]](http://openaccess.thecvf.com/content_CVPR_2019/html/He_ODE-Inspired_Network_Design_for_Single_Image_Super-Resolution_CVPR_2019_paper.html)
-
-[61] Wei Wang, Ruiming Guo, Yapeng Tian, Wenming Yang. CFSNet: Toward a Controllable Feature Space for Image Restoration, ICCV 2019. [[Paper]](https://arxiv.org/abs/1904.00634)
-
-[62] Jun-Ho Choi, Huan Zhang, Jun-Hyuk Kim, Cho-Jui Hsieh, Jong-Seok Lee. Evaluating Robustness of Deep Image Super-Resolution Against Adversarial Attacks, ICCV, 2019. [[Paper]](https://arxiv.org/pdf/1904.06097.pdf)
-
-[63] Ruofan Zhou, Sabine Süsstrunk. 	Kernel Modeling Super-Resolution on Real Low-Resolution Images. ICCV, 2019. [[Project]](https://ivrlwww.epfl.ch/ruofan/project_KMSR/KMSR.html)
-
-[64] Mohammad Saeed Rad, Behzad Bozorgtabar, Urs-Viktor Marti, Max Basler, Hazim Kemal Ekenel, Jean-Philippe Thiran. SROBB: Targeted Perceptual Loss for Single Image Super-Resolution. ICCV, 2019. [[Paper]](https://arxiv.org/abs/1908.07222)
-
-[65] Jianrui Cai, Hui Zeng, Hongwei Yong, Zisheng Cao, Lei Zhang. Toward Real-World Single Image Super-Resolution: A New Benchmark and a New Model. ICCV, 2019. [[Paper]](https://arxiv.org/pdf/1904.00523.pdf)
-
-[66] Wenlong Zhang, Yihao Liu, Chao Dong, Yu Qiao. 	RankSRGAN: Generative Adversarial Networks With Ranker for Image Super-Resolution. ICCV, 2019.[[Paper]](https://arxiv.org/abs/1908.06382)
-
-
-
-
-引自：https://github.com/YapengTian/Single-Image-Super-Resolution
+# Quick navigation
+
+- [repositories](awesome_paper_list_and_repos.md)
+- [Datasets](dataset.md)
+- [papers](#papers)
+  - [Non-DL based approach](non_dl_papers.md)
+  - [DL based approach](#DL-based-approach)
+    - [2014-2016](2014-2016_papers.md)
+    - [2017](2017_papers.md)
+    - [2018](2018_papers.md)
+    - [2019](2019_papers.md)
+    - [2020](2020_papers.md)
+    - [2021](2021_papers.md)
+    - [2022](2022_papers.md)
+    - [2023](2023_papers.md)
+	- [2024](2024_papers.md)
+    - [2025](#2025)
+- [Super Resolution workshop papers](workshops.md)
+- [Super Resolution survey](sr_survey.md)
+
+# Awesome-Super-Resolution（in progress）
+
+Collect some super-resolution related papers, data and repositories.
+
+## papers
+
+### DL based approach
+
+Note this table is referenced from [here](https://github.com/LoSealL/VideoSuperResolution/blob/master/README.md#network-list-and-reference-updating)
+
+### 2025
+More years papers, plase check Quick navigation
+
+| Title                  | Model                  | Published                                                    | Code                                                         | Keywords                                                     |
+| ---------------------- | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|CLIP-SR: Collaborative Linguistic and Image Processing for Super-Resolution|CLIP-SR | [arxiv](https://arxiv.org/abs/2412.11609) | | |
+|Diffusion Prior Interpolation for Flexibility Real-World Face Super-Resolution|DPI | [AAAI25](https://arxiv.org/abs/2412.16552) |[code](https://github.com/JerryYann/DPI) | |
+|STAR: Spatial-Temporal Augmentation with Text-to-Video Models for Real-World Video Super-Resolution|STAR | [arxiv](https://arxiv.org/abs/2501.02976) |[code](https://nju-pcalab.github.io/projects/STAR/) | |
+|StructSR: Refuse Spurious Details in Real-World Image Super-Resolution|StructSR | [AAAI25](https://arxiv.org/abs/2501.05777) |[code](https://github.com/LYCEXE/StructSR) | |
+|Generalized and Efficient 2D Gaussian Splatting for Arbitrary-scale Super-Resolution|GSASR | [arxiv](https://arxiv.org/abs/2501.06838) |[code](https://github.com/ChrisDud0257/GSASR) | |
+|DiffVSR: Revealing an Effective Recipe for Taming Robust Video Super-Resolution Against Complex Degradations|DiffVSR | [arxiv](https://arxiv.org/abs/2501.10110) |[code](https://xh9998.github.io/DiffVSR-project/) | |
+|BF-STVSR: B-Splines and Fourier-Best Friends for High Fidelity Spatial-Temporal Video Super-Resolution|BF-STVSR | [arxiv](https://arxiv.org/abs/2501.11043) | | |
+|Efficient Attention-Sharing Information Distillation Transformer for Lightweight Single Image Super-Resolution|ASID | [AAAI25](https://arxiv.org/abs/2501.15774) |[code](https://github.com/saturnian77/ASID) | |
+|Visual Autoregressive Modeling for Image Super-Resolution|VARSR | [arxiv](https://arxiv.org/abs/2501.18993) |[code](https://github.com/quyp2000/VARSR) | |
+|BiMaCoSR: Binary One-Step Diffusion Model Leveraging Flexible Matrix Compression for Real Super-Resolution|BiMaCoSR | [arxiv](https://arxiv.org/abs/2502.00333) |[code](https://github.com/Kai-Liu001/BiMaCoSR) | |
+|One Diffusion Step to Real-World Super-Resolution via Flow Trajectory Distillation|FluxSR | [arxiv](https://arxiv.org/abs/2502.01993) |[code](https://github.com/JianzeLi-114/FluxSR) | |
+|Fast Omni-Directional Image Super-Resolution: Adapting the Implicit Image Function with Pixel and Semantic-Wise Spherical Geometric Priors|FAOR | [AAAI25](https://arxiv.org/abs/2502.05902) |[code](https://github.com/GingaUL/FAOR) | |
+|Spatial Degradation-Aware and Temporal Consistent Diffusion Model for Compressed Video Super-Resolution|SDATC | [arxiv](https://arxiv.org/abs/2502.07381) | | |
+|CondiQuant: Condition Number Based Low-Bit Quantization for Image Super-Resolution|CondiQuant | [arxiv](https://arxiv.org/abs/2502.15478) |[code](https://github.com/Kai-Liu001/CondiQuant) | |
+|DifIISR: A Diffusion Model with Gradient Guidance for Infrared Image Super-Resolution|DifIISR | [CVPR25](https://arxiv.org/abs/2503.01187) |[code](https://github.com/zirui0625/DifIISR) | |
+|AutoLUT: LUT-Based Image Super-Resolution with Automatic Sampling and Adaptive Residual Learning|AutoLUT | [CVPR25](https://arxiv.org/abs/2503.01565) |[code](https://github.com/SuperKenVery/AutoLUT) | |
+|QArtSR: Quantization via Reverse-Module and Timestep-Retraining in One-Step Diffusion based Image Super-Resolution|QArtSR | [arxiv](https://arxiv.org/abs/2503.05584) |[code](https://github.com/libozhu03/QArtSR) | |
+|Emulating Self-attention with Convolution for Efficient Image Super-Resolution|ESC | [arxiv](https://arxiv.org/abs/2503.06671) |[code](https://github.com/dslisleedh/ESC) | |
+|CATANet: Efficient Content-Aware Token Aggregation for Lightweight Image Super-Resolution|CATANet | [CVPR25](https://arxiv.org/abs/2503.06896) |[code](https://github.com/EquationWalker/CATANet) | |
+|AdaptSR: Low-Rank Adaptation for Efficient and Scalable Real-World Super-Resolution|AdaptSR | [arxiv](https://arxiv.org/abs/2503.07748) | | |
+|MegaSR: Mining Customized Semantics and Expressive Guidance for Image Super-Resolution|MegaSR | [arxiv](https://arxiv.org/abs/2503.08096) |[code](https://github.com/striveAgain/MegaSR) | |
+|Dual-domain Modulation Network for Lightweight Image Super-Resolution|DMNet | [arxiv](https://arxiv.org/abs/2503.10047) || |
+|Dynamic Attention-Guided Diffusion for Image Super-Resolution|MegaSR | [WACV 2025](https://arxiv.org/pdf/2308.07977) | | |
+|Hallucination Score: Towards Mitigating Hallucinations in Generative Image Super-Resolution| | [arxiv](https://arxiv.org/abs/2507.14367) | ||
+|Efficient Burst Super-Resolution with One-step Diffusion|E-BSRD | [ACCV 2024](https://arxiv.org/abs/2507.13607) | | |
+|IM-LUT: Interpolation Mixing Look-Up Tables for Image Super-Resolution|IM-LUT | [ICCV 2025](https://arxiv.org/abs/2507.09923) | | |
+|4KAgent: Agentic Any Image to 4K Super-Resolution|4KAgent | [arxiv](https://arxiv.org/abs/2507.07105) |[code](https://4kagent.github.io/) | |
+|PromptSR: Cascade Prompting for Lightweight Image Super-Resolution|PromptSR | [TMM](https://arxiv.org/abs/2507.04118) |[code](https://github.com/wenyang001/PromptSR) | |
+|DAM-VSR: Disentanglement of Appearance and Motion for Video Super-Resolution|DAM-VSR | [SIGGRAPH 2025](https://arxiv.org/abs/2507.01012) |[code](https://kongzhecn.github.io/projects/dam-vsr/) | |
+|VSRM: A Robust Mamba-Based Framework for Video Super-Resolution|VSRM | [ICCV 2025](https://arxiv.org/abs/2506.22762) | | |
+|LightBSR: Towards Lightweight Blind Super-Resolution via Discriminative Implicit Degradation Representation Learning|LightBSR | [ICCV 2025](https://arxiv.org/abs/2506.22710) |[code](https://github.com/MJ-NCEPU/LightBSR) | |
+|SimpleGVR: A Simple Baseline for Latent-Cascaded Video Super-Resolution|SimpleGVR | [arxiv](https://arxiv.org/abs/2506.19838) |[code](https://simplegvr.github.io/) | |
+|RealSR-R1: Reinforcement Learning for Real-World Image Super-Resolution with Vision-Language Chain-of-Thought|RealSR-R1 | [arxiv](https://arxiv.org/abs/2506.16796) |[code](https://github.com/Junboooo/RealSR-R1) | |
+|One-Step Diffusion for Detail-Rich and Temporally Consistent Video Super-Resolution|DLoRAL | [arxiv](https://arxiv.org/abs/2506.15591) |[code](https://github.com/yjsunnn/DLoRAL) | |
+|Omnidirectional Video Super-Resolution using Deep Learning|S3PO | [TMI](https://arxiv.org/abs/2506.14803) | | |
+|Adaptive Dropout: Unleashing Dropout across Layers for Generalizable Image Super-Resolution|Adaptive Dropout | [CVPR2025](https://arxiv.org/abs/2506.12738) |[code](https://github.com/xuhang07/Adpative-Dropout) | |
+|Structural Similarity-Inspired Unfolding for Lightweight Image Super-Resolution|SSIU | [TIP](https://arxiv.org/abs/2506.11823) |[code](https://github.com/eezkni/SSIU) | |
+|MambaVSR: Content-Aware Scanning State Space Model for Video Super-Resolution|MambaVSR | [arxiv](https://arxiv.org/abs/2506.11768) | | |
+|DiffFuSR: Super-Resolution of all Sentinel-2 Multispectral Bands using Diffusion Models|DiffFuSR | [arxiv](https://arxiv.org/abs/2506.11764) |[code](https://github.com/NorskRegnesentral/DiffFuSR) | 
+|FCA2: Frame Compression-Aware Autoencoder for Modular and Fast Compressed Video Super-Resolution|FCA2 | [arxiv](https://arxiv.org/abs/2506.11545) |[code](https://github.com/handsomewzy/FCA2) | |
+|Stroke-based Cyclic Amplifier: Image Super-Resolution at Arbitrary Ultra-Large Scales|SbCA | [arxiv](https://arxiv.org/abs/2506.10774) | | |
+|LiftVSR: Lifting Image Diffusion to Video Super-Resolution via Hybrid Temporal Modeling with Only 4$\times$RTX 4090s|liftvsr | [arxiv](https://arxiv.org/abs/2506.08529) |[code](https://kopperx.github.io/projects/liftvsr/) | |
+|Controlled Data Rebalancing in Multi-Task Learning for Real-World Image Super-Resolution| | [arxiv](https://arxiv.org/abs/2506.05607) | | |
+|DualX-VSR: Dual Axial Spatial$\times$Temporal Transformer for Real-World Video Super-Resolution without Motion Compensation|DualX-VSR | [arxiv](https://arxiv.org/abs/2506.04830) | | |
+|Text-Aware Real-World Image Super-Resolution via Diffusion Model with Joint Segmentation Decoders|TADiSR | [arxiv](https://arxiv.org/abs/2506.04641) | | |
+|Joint Video Enhancement with Deblurring, Super-Resolution, and Frame Interpolation Network|DSFN | [arxiv](https://arxiv.org/abs/2506.03892) | | |
+|A Survey of Deep Learning Video Super-Resolution| | [arxiv](https://arxiv.org/abs/2506.03216) | | |
+|One-Step Diffusion-based Real-World Image Super-Resolution with Visual Perception Distillation|VPD-SR-1  | [arxiv](https://arxiv.org/abs/2506.02605) | | |
+|Self-supervised ControlNet with Spatio-Temporal Mamba for Real-world Video Super-resolution|scst  | [CVPR 2025](https://arxiv.org/abs/2506.02605) |[code](https://ssj9596.github.io/scst-project/) | |
+|TextSR: Diffusion Super-Resolution with Multilingual OCR Guidance|TextSR | [arxiv](https://arxiv.org/abs/2505.23119) | | |
+|Instance Data Condensation for Image Super-Resolution|IDC | [arxiv](https://arxiv.org/abs/2505.21099) | | |
+|UltraVSR: Achieving Ultra-Realistic Video Super-Resolution with Efficient One-Step Diffusion Space|UltraVSR | [arxiv](https://arxiv.org/abs/2505.19958) | | |
+|Chain-of-Zoom: Extreme Super-Resolution via Scale Autoregression and Preference Alignment|CoZ | [arxiv](https://arxiv.org/abs/2505.18600) |[code](https://bryanswkim.github.io/chain-of-zoom/) | |
+|DOVE: Efficient One-Step Diffusion Model for Real-World Video Super-Resolution|DOVE | [arxiv](https://arxiv.org/abs/2505.16239) |[code](https://github.com/zhengchen1999/DOVE) | |
+|Accelerating Diffusion-based Super-Resolution with Dynamic Time-Spatial Sampling|TSS | [arxiv](https://arxiv.org/abs/2505.12048) | | |
+|Semantic-Guided Diffusion Model for Single-Step Image Super-Resolution|SAMSR | [arxiv](https://arxiv.org/abs/2505.07071) |[code](https://github.com/Liu-Zihang/SAMSR) | |
+|High-Frequency Prior-Driven Adaptive Masking for Accelerating Image Super-Resolution|AMSR | [arxiv](https://arxiv.org/abs/2505.06975) |[code](https://github.com/shangwei5/AMSR) | |
+|EvEnhancer: Empowering Effectiveness, Efficiency and Generalizability for Continuous Space-Time Video Super-Resolution with Events|EvEnhancer | [CVPR 2025](https://arxiv.org/abs/2505.04657) |[code](https://github.com/W-Shuoyan/EvEnhancer) | |
+|Small Clips, Big Gains: Learning Long-Range Refocused Temporal Information for Video Super-Resolution|LRTI-VSR | [arxiv](https://arxiv.org/abs/2505.02159) |[code](https://github.com/LabShuHangGU/LRTI-VSR) | |
+|GuideSR: Rethinking Guidance for One-Step High-Fidelity Diffusion-Based Super-Resolution|GuideSR | [arxiv](https://arxiv.org/abs/2505.00687) | | |
+|DSPO: Direct Semantic Preference Optimization for Real-World Image Super-Resolution|DSPO | [arxiv](https://arxiv.org/abs/2504.15176) | | |
+|NTIRE 2025 Challenge on Image Super-Resolution ($\times$4): Methods and Results| | [arxiv](https://arxiv.org/abs/2504.14582) | | |
+|AnyTSR: Any-Scale Thermal Super-Resolution for UAV|AnyTSR | [arxiv](https://arxiv.org/abs/2504.13682) |[code](https://arxiv.org/pdf/2504.13682) | |
+|Event-Enhanced Blurry Video Super-Resolution|Ev-DeblurVSR | [AAAI 2025](https://arxiv.org/abs/2504.13042) |[code](https://dachunkai.github.io/ev-deblurvsr.github.io/) | |
+|The Tenth NTIRE 2025 Efficient Super-Resolution Challenge Report| | [arxiv](https://arxiv.org/abs/2504.10686) | | |
+|PIDSR: Complementary Polarized Image Demosaicing and Super-Resolution|PIDSR | [CVPR 2025](https://arxiv.org/abs/2504.07758) |[code](https://github.com/PRIS-CV/PIDSR) | |
+|BUFF: Bayesian Uncertainty Guided Diffusion Probabilistic Model for Single Image Super-Resolution|BUFF | [AAAI 2025](https://arxiv.org/abs/2504.03490) | | |
+|DiT4SR: Taming Diffusion Transformer for Real-World Image Super-Resolution|DiT4SR | [arxiv](https://arxiv.org/abs/2503.23580) |[code](https://adam-duan.github.io/projects/dit4sr/) | |
+|Consistency Trajectory Matching for One-Step Generative Super-Resolution|CTMSR | [ICCV 2025](https://arxiv.org/abs/2503.20349) |[code](https://github.com/LabShuHangGU/CTMSR) | |
+|Progressive Focused Transformer for Single Image Super-Resolution|PFT-SR | [CVPR 2025](https://arxiv.org/abs/2503.20337) |[code](https://github.com/LabShuHangGU/PFT-SR) | |
+|Burst Image Super-Resolution with Mamba|BurstMamba | [arxiv](https://arxiv.org/abs/2503.19634) | | |
+|Exploring Semantic Feature Discrimination for Perceptual Image Super-Resolution and Opinion-Unaware No-Reference Image Quality Assessment|SFD | [CVPR2025](https://arxiv.org/abs/2503.19295) |[code](https://github.com/GuangluDong0728/SFD) | |
+|Uncertainty-guided Perturbation for Image Super-Resolution Diffusion Model|UPSR | [CVPR 2025](https://arxiv.org/abs/2503.18512) |[code](https://github.com/LabShuHangGU/UPSR) | |
+|Latent Space Super-Resolution for Higher-Resolution Image Generation with Diffusion Models|LSRNA | [CVPR 2025](https://arxiv.org/abs/2503.18446) |[code](https://github.com/3587jjh/LSRNA) | |
+|The Power of Context: How Multimodality Improves Image Super-Resolution|MMSR | [CVPR 2025](https://arxiv.org/abs/2503.14503) |[code](https://mmsr.kfmei.com/) | |
+|FedVSR: Towards Model-Agnostic Federated Learning in Video Super-Resolution|FedVSR | [arxiv](https://arxiv.org/abs/2503.13745) |[code](https://github.com/alimd94/FedVSR) | |
+|Rethinking Image Evaluation in Super-Resolution| | [arxiv](https://arxiv.org/abs/2503.13074) | | |
+|QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models for Efficient Image Super-Resolution|QDM | [arxiv](https://arxiv.org/abs/2503.12015) |[code](https://arxiv.org/pdf/2503.12015) | |
+|Perceive, Understand and Restore: Real-World Image Super-Resolution with Autoregressive Multimodal Generative Models|PURE | [arxiv](https://arxiv.org/abs/2503.11073) |[code](https://github.com/nonwhy/PURE) | |
+|Auto-Encoded Supervision for Perceptual Image Super-Resolution|AESOP | [CVPR 2025](https://arxiv.org/pdf/2412.00124) |[code](https://github.com/2minkyulee/AESOP-Auto-Encoded-Supervision-for-Perceptual-Image-Super-Resolution) | |
+|DC-VSR: Spatially and Temporally Consistent Video Super-Resolution with Video Diffusion Prior|DC-VSR | [SIGGRAPH 2025](https://arxiv.org/abs/2502.03502) |[code](https://daramgc.github.io/docs/Publications/dc-vsr) | |
 
 
