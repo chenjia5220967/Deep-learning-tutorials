@@ -12,3 +12,5 @@ https://github.com/amusi/awesome-object-detection
 https://github.com/mrgloom/awesome-semantic-segmentation
 
 https://github.com/bentrevett/pytorch-image-classification
+
+https://github.com/ChaofWang/Awesome-Super-Resolution?tab=readme-ov-file#
