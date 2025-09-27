@@ -17,7 +17,7 @@
 
 经过科研工作者的反复验证及广泛使用，这些模型逐渐成为经典，我们这里收集了一些常用的模型进行介绍。
 
-
+ 
 ### 1. VGG
 
 [论文地址](https://arxiv.org/abs/1409.1556)
@@ -86,3 +86,4 @@ MobileNet V2是之前MobileNet V1的改进版。MobileNet V1中主要是引入�
 ### 7.DenseNet
 
 CVPR17 的Best Paper，模型体积小，准确率高。我们利用densenet + ctc进行进行OCR文字识别训练，效果不错。比基于resnet、vgg等基础网络的ocr效果好。
+
