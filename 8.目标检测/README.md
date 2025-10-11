@@ -1,5 +1,8 @@
 # object-detection
 
+method libs:
+https://github.com/PaddlePaddle/PaddleDetection?tab=readme-ov-file
+
 [TOC]
 This is a list of awesome articles about object detection. If you want to read the paper according to time, you can refer to [Date](Date.md).
 
